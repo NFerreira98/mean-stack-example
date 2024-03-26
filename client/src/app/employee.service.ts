@@ -6,10 +6,10 @@ import { Employee } from './employee';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private url = 'http://localhost:5200';
+  private url = 'https://node-express-api-mifyh22ana-uc.a.run.app';
   employees$ = signal<Employee[]>([]);
   employee$ = signal<Employee>({} as Employee);
-  
+
   constructor(private httpClient: HttpClient) { }
 
   private refreshEmployees() {
